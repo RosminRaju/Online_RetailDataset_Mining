@@ -1,6 +1,8 @@
 # Final_Project_DataMining
 # Dataset Choosen:
 # TBD
+# Major workload:
+# TBD
 # Schdule:
 # 1. Choose Dataset: Before spring vacation
 # 2. Final Project Proposal  3/37/2016

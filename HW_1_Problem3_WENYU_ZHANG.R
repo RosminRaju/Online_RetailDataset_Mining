@@ -10,9 +10,7 @@ require("plotrix")
 require("ggplot2")
 require("reshape2")
 require("scales")
-require("plyr")
-sales_data <- read.csv("sales.csv")
-#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+require("plyr")#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 #Step 2: Apply visualization technique #1: Pie Charts
 product_amount_data <- tapply(sales_data$amount,sales_data$product,sum)
 product_unit_data <- tapply(sales_data$unit,sales_data$product,sum)

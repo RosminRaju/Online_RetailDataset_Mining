@@ -2,8 +2,8 @@ cat("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n")
 cat("++         FINAL PROJECT                                       ++\n")
 cat("++         Dataset: Online Retail Dataset                      ++\n")
 cat("++         Team Member: WENYU ZHANG, SIXUAN CHEN               ++\n")
-cat("++         SUID: 233508014                                     ++\n")
-cat("++         DATE: 4/25/2016                                     ++\n")
+cat("++         SUID: 233508014, 868010354                          ++\n")
+cat("++         DATE: 5/08/2016                                     ++\n")
 cat("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n")
 library("RWeka")
 library("arules")
@@ -29,21 +29,3 @@ evaluate_Weka_classifier(decision_tree1, class = T, numFolds = 10)
 # Use new test dataset
 evaluate_Weka_classifier(decision_tree1, newdata = test_data, class = T)
 # Both decision tree models have high accuracies
-
-
-# Classification using raw dataset
-raw_data <- read.csv("raw_data.csv")
-raw_data <- raw_data[,-1]
-raw_data$Cluster <- 0
-num_raw_data <- length(raw_data[,1])
-num_classification_data <- length(classification_data[,1])
-str(raw_data)
-for(i in 1:num_raw_data){
-  for(j in 1:num_classification_data){
-    if(raw_data[i,7]==classification_data[j,1]){
-      raw_data[i,9] <- classification_data[j,5]
-      next
-    }
-  }
-}
-write.csv(raw_data,file="raw_data_classification.csv")
